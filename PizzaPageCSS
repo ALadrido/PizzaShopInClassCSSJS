@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+    color: #cfcfcf;
+    font-style: italic;
+}
+p {
+    text-align: center;
+}
+.imagePizza {
+    text-align: center;
+}
+.body {
+    background-color: #9900ff;
+}
+.nameForm {
+    text-align: center;
+    color: #cfcfcf;
+}
+.contactMethodForm {
+    text-align: center;
+    color: #cfcfcf;
+}
+.toppingsForm {
+    text-align: center;
+    color: #cfcfcf;
+}
+.pizzaSizeForm {
+    text-align: center;
+    color: #cfcfcf;
+}
+.buttonSize1 {
+    height:50px;
+    width:150px;
+    background-color: #cfcfcf;
+}
+.buttonSize2 {
+    height:50px;
+    width:150px;
+    background-color: #cfcfcf;
+}
