@@ -105,5 +105,47 @@ function pizzaSizeConfirm() {
         alert("The Price of your pie is: " + myPizzaPrice + "$")
         totalPrice = totalPrice + myPizzaPrice;
 }
+        function submitForm() {
+            let fName = document.getElementById("firstName").value;
+            let lName = document.getElementById("lastName").value;
+            let uAddress = document.getElementById("userAddress").value
+            let nameConfirmMSG = "Your Name is: " + fName + " " + lName;
+            let optionMethod = document.querySelector('input[name = "contactMethod"]:checked').value;
+            let myList = document.getElementById("pizzaSizeSelect");
+            let sizeSelect = myList.options[myList.selectedIndex].text;
+            let today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            let currentTime = [ h, m, s ].join(':');
+            let newLine = "\r\n";
+            let selectedString = "";
+            alert(nameConfirmMSG += newLine + "Your Address is: " + uAddress);
+            if (optionMethod == 'Delivery') {
+                alert("Your contact method for your order is: " + optionMethod + "\r\n" + "It will be delivered in 30 minutes to: " + uAddress);
+            }
+            else {
+                alert("Your contact method for your order is: " + optionMethod);
+            }
+            for(i=0; i<=7; i++) {
+                if(document.querySelector('input[name=checkbox' + i +']:checked')) {
+                    alert("You have chosen the following topping for your pizza: " + document.getElementById("checkbox" + i).value);
+                    }
+                }
+            alert("Your pizza will be: " + sizeSelect + " Size");
+            alert("The Total Price of your order is: " + "\n" + totalPrice + "$");
+            let x = confirm("Would you like to submit your order?")
+            if (x == true) {
+                document.write("Your order was submitted at: " + currentTime + "<br>" + "Thank You " + fName + "!"
+                + "<br>" + "Your order was placed on: " + today.toLocaleDateString() + "<br>" + "The Total of Your Order is: " + totalPrice + "$");
+            }
+            else {
+                alert("You have canceled the order submission")
+            }
+            //alert(x)
+        }
+        function resetForm() {
+            alert("You have chosen to reset the form." + "\nPlease Enter Your New information.")
+        }
 
 }
